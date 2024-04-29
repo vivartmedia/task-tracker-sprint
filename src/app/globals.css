@@ -2,32 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: Holtwood;
+  src: url(../app/Assets/Holtwood_One_SC/HoltwoodOneSC-Regular.ttf);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: Hammersmith;
+  src: url(../app/Assets/Hammersmith_One/HammersmithOne-Regular.ttf);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.holtwood{
+  font-family: Holtwood;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.hammer{
+  font-family: Hammersmith;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #AEE6D9 0%, #3EBE9F 100%);
+}
+
+.heightPage{
+  height: 100vh;
+  background-color: #F1FFFC;
 }
