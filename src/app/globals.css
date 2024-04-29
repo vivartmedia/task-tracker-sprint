@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Holtwood;
-  src: url(../app/Assets/Holtwood_One_SC/HoltwoodOneSC-Regular.ttf);
-}
-
-@font-face {
-  font-family: Hammersmith;
-  src: url(../app/Assets/Hammersmith_One/HammersmithOne-Regular.ttf);
-}
-
 .holtwood{
   font-family: Holtwood;
 }
@@ -22,12 +12,6 @@
 
 .gradient {
   background: linear-gradient(90deg, #AEE6D9 0%, #3EBE9F 100%);
-}
-
-
-.heightPage{
-  height: 100vh;
-  background-color: #F1FFFC;
 }
 
 .borderSolid{

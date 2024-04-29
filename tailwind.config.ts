@@ -2,8 +2,6 @@ const flowbite = require("flowbite-react/tailwind");
 
 
 import type { Config } from "tailwindcss";
-const flowbite = require("flowbite-react/tailwind");
-
 /** @type {import('tailwindcss').Config} */
 
 const config: Config = {
