@@ -3,12 +3,12 @@
 import { Card, Button, Label, TextInput, Modal, FileInput, Dropdown, Accordion, ListGroup, } from "flowbite-react";
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import { NavBarComponent } from "../Components/NavBarComponent";
-
+import { ModalCreate } from "../Components/ModalCreate";
 
 const Boardpage = () => {
-
+const [openModal, setOpenModal] = useState(false);
 
     return (
         <>
@@ -21,7 +21,9 @@ const Boardpage = () => {
                         <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
                         <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
                         <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
-                        <h1 className="text-6xl font-thin">+</h1>
+                        <h1 onClick={() => setOpenModal(true)} className="text-6xl font-thin">+</h1>
+                        <ModalCreate/>
+                       
                     </div>
 
                 </div>
@@ -29,9 +31,12 @@ const Boardpage = () => {
 
                 <div className="flex flex-col items-center mb-10">
 
-                <div className="container mx-auto p-4 bg-green-200 max-w-screen-xl" style={{ maxWidth: '90%' }}>
-    <h1 className="pb-4 text-2xl font-semibold">To-Do +</h1>
-    <div className="flex justify-around pb-4 overflow-x-auto space-x-4">
+                    <div className="container mx-auto p-4 bg-green-200 max-w-screen-xl" style={{ maxWidth: '90%' }}>
+                        <div className="flex items-center align-middle">
+                            <h1 className="pt-1 text-2xl font-semibold">To-Do </h1>
+                            <h1 className="text-5xl font-thin">+</h1>
+                        </div>
+                        <div className="flex justify-around pb-4 overflow-x-auto space-x-4">
                             <Card href="#" className="flex-none max-w-sm bg-white p-4 w-80">
                                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     Test login
@@ -93,13 +98,13 @@ const Boardpage = () => {
                                     <div className="w-12 h-12 bg-pink-400 rounded-full"></div>
                                 </div>
                             </Card>
-                            
+
                         </div>
 
                     </div>
 
- 
-                    <div className="container mx-auto p-4  m-10  bg-green-300	max-w-screen-xl" style={{maxWidth: '90%'}}>
+
+                    <div className="container mx-auto p-4  m-10  bg-green-300	max-w-screen-xl" style={{ maxWidth: '90%' }}>
                         <h1 className="pb-4 text-2xl font-semibold">In Progress</h1>
                         <div className="flex justify-around pb-4 overflow-x-auto space-x-4">
                             <Card href="#" className=" flex-none max-w-sm bg-white p-4 w-80">
@@ -150,20 +155,20 @@ const Boardpage = () => {
                                     <div className="w-12 h-12 bg-pink-400 rounded-full"></div>
                                 </div>
                             </Card>
-                            
+
                         </div>
 
                     </div>
 
 
-     
 
-                    <div className="container mx-auto p-4  m-10  bg-green-400	max-w-screen-xl" style={{maxWidth: '90%'}}>
+
+                    <div className="container mx-auto p-4  m-10  bg-green-400	max-w-screen-xl" style={{ maxWidth: '90%' }}>
                         <h1 className="pb-4 text-2xl font-semibold">Completed</h1>
                         <div className="flex justify-around pb-4 overflow-x-auto space-x-4">
 
-                      
-                        <Card href="#" className="flex-none max-w-sm bg-white p-4 w-80">
+
+                            <Card href="#" className="flex-none max-w-sm bg-white p-4 w-80">
                                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     Test login
                                 </h5>
