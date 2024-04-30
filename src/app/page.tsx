@@ -40,7 +40,7 @@ export default function Home() {
         <div className="mb-1 block">
           <Label htmlFor="username"  className="hammer pl-3" value="Username" />
         </div>
-        <TextInput className="w-full border-none rounded-md" id="username" type="text"  required onChange={(e) => setUsername(e.target.value)} />
+        <TextInput className="w-full border-none rounded-md h-12" id="username" type="text"  required onChange={(e) => setUsername(e.target.value)} />
       </div>
       <div>
         <div className="mb-1 block">

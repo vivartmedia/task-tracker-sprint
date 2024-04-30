@@ -11,14 +11,19 @@ export function NavBarComponent() {
     <Navbar.Brand>
       <img src={image.src} className="ml-3 h-16" alt="Flowbite React Logo" />
     </Navbar.Brand>     
-    {/* <Dropdown>
-        <Dropdown.Toggle as={Avatar} src={otherImage.src} className="mr-2" />
-        <Dropdown.Menu>
-          <Dropdown.Item>Action 1</Dropdown.Item>
-          <Dropdown.Item>Action 2</Dropdown.Item>
-          <Dropdown.Item>Action 3</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown> */}
+      <div className="flex md:order-2">
+        <Dropdown
+        className="w-28"
+          arrowIcon={false}
+          label={
+            <Avatar alt="User settings" img={otherImage.src} className="h-16 w-16" rounded />
+          }
+        >
+          <Dropdown.Item className="flex w-28 p-2 hammer justify-center" >PROFILE</Dropdown.Item>
+          <Dropdown.Item className="flex w-28 py-2 hammer justify-center" >CREATE BOARD</Dropdown.Item>
+          <Dropdown.Item className="flex w-28 p-2 hammer justify-center" >LOG OUT</Dropdown.Item>
+        </Dropdown>
+      </div>
   </Navbar>
   );
 }
