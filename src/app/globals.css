@@ -30,6 +30,6 @@
   background-color: #F1FFFC;
 }
 
-.border{
-  border: black 1px solid
+.borderSolid{
+  border: black 1px solid !important
 }
