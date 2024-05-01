@@ -21,11 +21,9 @@ const [openModal, setOpenModal] = useState(false);
                         <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
                         <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
                         <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
-                        <h1 onClick={() => setOpenModal(true)} className="text-6xl font-thin">+</h1>
+                        {/* <h1 onClick={() => setOpenModal(true)} className="text-6xl font-thin">+</h1> */}
                         <ModalCreate/>
-                       
                     </div>
-
                 </div>
 
 

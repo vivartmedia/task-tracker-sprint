@@ -2,6 +2,7 @@ const flowbite = require("flowbite-react/tailwind");
 
 
 import type { Config } from "tailwindcss";
+
 /** @type {import('tailwindcss').Config} */
 
 const config: Config = {
