@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Modal, Dropdown } from "flowbite-react";
+import { Button, Modal, Dropdown, TextInput } from "flowbite-react";
 import { useState } from "react";
 interface ModalCommentProps {
     openModal: boolean; // This tells whether the Modal is open or not
@@ -10,6 +10,13 @@ interface ModalCommentProps {
 const ModalComment: React.FC<ModalCommentProps> = ({ openModal, setOpenModal }) => {
     const [todoselectedItem, settodoSelectedItem] = useState('To-Do')
     const [priorityselectedItem, setprioritySelectedItem] = useState('Priority - 5')
+
+    const [commentModal, setCommentModal] = useState(''); // State to hold the comment text
+
+    const handleCommentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCommentModal(e.target.value);
+    };
+
   
   return (
     <>
@@ -26,6 +33,8 @@ const ModalComment: React.FC<ModalCommentProps> = ({ openModal, setOpenModal }) 
             <div className="w-2/3 ">
               <h1 className="text-2xl pb-2">Description</h1>
               <p className="bg-green-50 p-3">Comment comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur dolorem nemo nobis similique eaque quo quos ullam laborum laudantium. Quia odit quo optio, vero at voluptatum quibusdam qui perspiciatis?</p>
+              <TextInput id="commentmodal" type="text"  onChange={handleCommentChange} placeholder="Add your comment..." className="mt-4 h-20" />
+              
             </div>
 
             <div id="assignee" className="w-1/3 bg-gray-100 p-4 flex flex-col space-y-4">
