@@ -34,7 +34,7 @@ const Profile = () => {
     "#57CDFF",
     "#8A2BE2",
   ];
-  let bgColor = ["#AEE6D9", "#6FDFC4", "#3EBE9F"];
+  let backgroundColorDiv = ["#AEE6D9", "#6FDFC4", "#3EBE9F"];
 
   const handlePfpChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let reader = new FileReader();
@@ -148,27 +148,27 @@ const Profile = () => {
         <div className="flex flex-col items-center gap-10 overflow-y-scroll h-[75%] md:h-auto">
           <BoardListComponent
             nameBoard={"OUR BOARD"}
-            bgColor={bgColor[0]}
+            backgroundColorDiv={backgroundColorDiv[0]}
           />
           <BoardListComponent
             nameBoard={"chores"}
-            bgColor={bgColor[1]}
+            backgroundColorDiv={backgroundColorDiv[1]}
           />
           <BoardListComponent
             nameBoard={"Board #3"}
-            bgColor={bgColor[2]}
+            backgroundColorDiv={backgroundColorDiv[2]}
           />
           <BoardListComponent
             nameBoard={"OUR BOARD"}
-            bgColor={bgColor[0]}
+            backgroundColorDiv={backgroundColorDiv[0]}
           />
           <BoardListComponent
             nameBoard={"chores"}
-            bgColor={bgColor[1]}
+            backgroundColorDiv={backgroundColorDiv[1]}
           />
           <BoardListComponent
             nameBoard={"Board #3"}
-            bgColor={bgColor[2]}
+            backgroundColorDiv={backgroundColorDiv[2]}
           />
         </div>
       </div>
