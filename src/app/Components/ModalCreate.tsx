@@ -5,12 +5,13 @@ import { Button, Modal, Dropdown } from "flowbite-react";
 import { useState } from "react";
 
 export function ModalCreate() {
-  const [openModal, setOpenModal] = useState(true);
-  const [selectedItem, setSelectedItem] = useState('To-Do')
+  const [openModal, setOpenModal] = useState(false);
+  const [todoselectedItem, settodoSelectedItem] = useState('To-Do')
+  const [priorityselectedItem, setprioritySelectedItem] = useState('Priority - 5')
 
   return (
     <>
-      <h1 className="text-6xl font-thin cursor-pointer" onClick={() => setOpenModal(true)}>+</h1>
+      <h1 className="text-5xl font-thin cursor-pointer" onClick={() => setOpenModal(true)}>+</h1>
       <div className="flex justify-between">
         <Modal size='6xl' show={openModal} onClose={() => setOpenModal(false)} >
 
@@ -21,7 +22,7 @@ export function ModalCreate() {
           <div className="flex justify-between pb-12 px-9 space-x-4">
             <div className="w-2/3 ">
               <h1 className="text-2xl pb-2">Description</h1>
-              <p className="bg-green-50 p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur dolorem nemo nobis similique eaque quo quos ullam laborum laudantium. Quia odit quo optio, vero at voluptatum quibusdam qui perspiciatis?</p>
+              <p className="bg-green-50 p-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur dolorem nemo nobis similique eaque quo quos ullam laborum laudantium. Quia odit quo optio, vero at voluptatum quibusdam qui perspiciatis?</p>
             </div>
 
             <div id="assignee" className="w-1/3 bg-gray-100 p-4 flex flex-col space-y-4">
@@ -39,11 +40,20 @@ export function ModalCreate() {
                 <h1 id="datecreated"></h1>
               </div>
               <div className="w-60">
-                <Dropdown className="w-60" label={selectedItem}>
+                <Dropdown className="w-60" label={todoselectedItem}>
                   <Dropdown.Item>To-Do</Dropdown.Item>
                   <Dropdown.Item>In Progress</Dropdown.Item>
                   <Dropdown.Item>Completed</Dropdown.Item>
                   <Dropdown.Item>Add another category</Dropdown.Item>
+                </Dropdown>
+              </div>
+              <div className="w-60">
+                <Dropdown className="w-60" label={priorityselectedItem}>
+                  <Dropdown.Item>Priority - 5</Dropdown.Item>
+                  <Dropdown.Item>Priority - 4</Dropdown.Item>
+                  <Dropdown.Item>Priority - 3</Dropdown.Item>
+                  <Dropdown.Item>Priority - 2</Dropdown.Item>
+                  <Dropdown.Item>Priority - 1</Dropdown.Item>
                 </Dropdown>
               </div>
             </div>
@@ -59,11 +69,12 @@ export function ModalCreate() {
 
             </div>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={() => setOpenModal(false)}>I accept</Button>
-            <Button color="gray" onClick={() => setOpenModal(false)}>
-              Decline
+          <Modal.Footer className="flex justify-center space-x-6">
+          <Button color="gray" onClick={() => setOpenModal(false)}>
+              Cancel
             </Button>
+            <Button onClick={() => setOpenModal(false)}>Create</Button>
+           
           </Modal.Footer>
 
 
