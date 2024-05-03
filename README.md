@@ -1,3 +1,8 @@
+// GROUP 6 : PM: Jeriah FE: Zahid FE: Ashur BE: Caleb BE: Marcos
+// 5/3/24
+// Task Tracker Sprint
+// Create a Task Tracker with a team of 5 within the week
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
