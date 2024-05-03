@@ -3,14 +3,9 @@ import { useRouter } from "next/navigation";
 
 export const BoardListComponent = (props: {
   nameBoard: string;
-  bgColor: string;
+  backgroundColorDiv: string;
 }) => {
-  let colorsArray = [
-    ["#57CDFF", "#FF6E6E", "#D59FFF"],
-    ["#D3FF57", "#FFC56E", "#57CDFF"],
-    ["#D59FFF", "#57CDFF", "#513DCC"],
-  ];
-
+ 
   const router = useRouter();
 
   const handlePage = () => {
@@ -19,48 +14,48 @@ export const BoardListComponent = (props: {
 
   return (
     <div
-      className={`hammer bg-[${props.bgColor}] rounded-md min-h-20 w-3/4 flex justify-between items-center px-5 cursor-pointer`}
+      className={`hammer bg-[${props.backgroundColorDiv}] rounded-md min-h-20 w-3/4 flex justify-between items-center px-5 cursor-pointer`}
       onClick={handlePage}
     >
       <h1 className="text-2xl">{props.nameBoard}</h1>
       <div className="flex gap-2">
-        {props.bgColor == "#AEE6D9" ? (
+        {props.backgroundColorDiv == "#AEE6D9" ? 
           <>
             <div
-              className={`bg-[${colorsArray[0][0]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#57CDFF] border border-black rounded-full h-8 w-8`}
             ></div>
             <div
-              className={`bg-[${colorsArray[0][1]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#FF6E6E] border border-black rounded-full h-8 w-8`}
             ></div>
             <div
-              className={`bg-[${colorsArray[0][2]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#D59FFF] border border-black rounded-full h-8 w-8`}
             ></div>
           </>
-        ) : props.bgColor == "#6FDFC4" ? (
+         : props.backgroundColorDiv == "#6FDFC4" ? 
           <>
             <div
-              className={`bg-[${colorsArray[1][0]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#D3FF57] border border-black rounded-full h-8 w-8`}
             ></div>
             <div
-              className={`bg-[${colorsArray[1][1]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#FFC56E] border border-black rounded-full h-8 w-8`}
             ></div>
             <div
-              className={`bg-[${colorsArray[1][2]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#57CDFF] border border-black rounded-full h-8 w-8`}
             ></div>
           </>
-        ) : (
+         : 
           <>
             <div
-              className={`bg-[${colorsArray[2][0]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#D59FFF] border border-black rounded-full h-8 w-8`}
             ></div>
             <div
-              className={`bg-[${colorsArray[2][1]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#57CDFF] border border-black rounded-full h-8 w-8`}
             ></div>
             <div
-              className={`bg-[${colorsArray[2][2]}] border border-black rounded-full h-8 w-8`}
+              className={`bg-[#513DCC] border border-black rounded-full h-8 w-8`}
             ></div>
           </>
-        )}
+        }
       </div>
     </div>
   );

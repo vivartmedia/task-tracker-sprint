@@ -13,6 +13,7 @@ const Boardpage = () => {
     return (
         <>
             <NavBarComponent />
+            <NavBarComponent />
 
             <div className="flex min-h-screen flex-col md:p-24 p-6  bg-green-50">
                 <div className="flex md:flex-row flex-col md:items-center pb-4">
@@ -24,6 +25,7 @@ const Boardpage = () => {
                         <h1 onClick={() => setOpenModal(true)} className="text-6xl font-thin">+</h1>
                     </div>
                 </div>
+
 
 
                 <div className="flex flex-col items-center mb-10">
@@ -172,6 +174,10 @@ const Boardpage = () => {
 
 
                     <div className="container mx-auto p-4  m-10  bg-green-400	max-w-screen-xl" style={{ maxWidth: '90%' }}>
+
+
+
+                    <div className="container mx-auto p-4  m-10  bg-green-400	max-w-screen-xl" style={{ maxWidth: '90%' }}>
                         <h1 className="pb-4 text-2xl font-semibold">Completed</h1>
                         <div className="flex items-center space-y-4 md:space-y-0 md:flex-row flex-col align-middle md:justify-around md:pb-4 md:overflow-x-auto overflow-y-scroll max-h-96 md:space-x-4 ">
 
@@ -238,6 +244,7 @@ const Boardpage = () => {
                                 </div>
                             </Card>
                         </div>
+
 
                     </div>
 
