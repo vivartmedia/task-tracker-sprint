@@ -59,3 +59,23 @@ export const checkToken = () => {
     return result
 }
 
+
+
+// ------------------------------------------------
+export const CreateTask = async (TaskObj: any) => {
+    const res = await fetch(url + `/Task/CreateTask`, {
+        method: "POST",
+        headers: {
+            'Content-Type': "application/json"
+        },
+        body: JSON.stringify(TaskObj)
+    })
+    if (!res.ok) {
+        const message = "an error has occured " + res.status;
+        throw new Error(message);
+    }
+
+    const data = await res.json();
+    console.log(data);
+    return data
+}
