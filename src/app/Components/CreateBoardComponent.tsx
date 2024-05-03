@@ -1,6 +1,8 @@
 
 import { Button, Modal, TextInput } from "flowbite-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import addbtn from '../Assets/image (4).png'
 
 export function CreateBoardComponent() {
   const [openModal, setOpenModal] = useState(false);
@@ -9,9 +11,16 @@ export function CreateBoardComponent() {
     setOpenModal(false);
   }
 
+  const router = useRouter();
+
+  const handleSubmit = () => {
+  router.push('/Boardpage')
+  }
+
   return (
     <>
-      <button className="text-black bg-transparent text-6xl font-thin items-center " onClick={() => setOpenModal(true)}>+</button>
+      {/* <button className="text-black bg-transparent text-4xl font-thin  items-center " onClick={() => setOpenModal(true)}>+</button> */}
+      <img src={addbtn.src} alt="create board btn" height={30} width={30} onClick={() => setOpenModal(true)} className="cursor-pointer" />
       <Modal  dismissible className="text-black bg-transparent backdrop-blur-sm"  show={openModal} onClose={() => setOpenModal(false)}>
         <Modal.Header className="border-none p-0 "></Modal.Header>
         <Modal.Body className="border-black justify-center text-center " >
@@ -33,7 +42,7 @@ export function CreateBoardComponent() {
               </p>
               <TextInput className="w-full borderSolid rounded-lg mb-4 holtwood" id="password2" type="text" placeholder="Name Board" required />
               <div className="flex justify-center">
-                <Button className="bg-[#0B7D61] text-white" color="white" onClick={() => setOpenModal(false)}>
+                <Button className="bg-[#0B7D61] text-white" color="white" onClick={handleSubmit}>
                   CREATE
                 </Button>
               </div>

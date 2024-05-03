@@ -19,7 +19,7 @@ export const BoardListComponent = (props: {
     >
       <h1 className="text-2xl">{props.nameBoard}</h1>
       <div className="flex gap-2">
-        {props.backgroundColorDiv == "#AEE6D9" ? (
+        {props.backgroundColorDiv == "#AEE6D9" ? 
           <>
             <div
               className={`bg-[#57CDFF] border border-black rounded-full h-8 w-8`}
@@ -31,7 +31,7 @@ export const BoardListComponent = (props: {
               className={`bg-[#D59FFF] border border-black rounded-full h-8 w-8`}
             ></div>
           </>
-        ) : props.backgroundColorDiv == "#6FDFC4" ? (
+         : props.backgroundColorDiv == "#6FDFC4" ? 
           <>
             <div
               className={`bg-[#D3FF57] border border-black rounded-full h-8 w-8`}
@@ -43,7 +43,7 @@ export const BoardListComponent = (props: {
               className={`bg-[#57CDFF] border border-black rounded-full h-8 w-8`}
             ></div>
           </>
-        ) : (
+         : 
           <>
             <div
               className={`bg-[#D59FFF] border border-black rounded-full h-8 w-8`}
@@ -55,7 +55,7 @@ export const BoardListComponent = (props: {
               className={`bg-[#513DCC] border border-black rounded-full h-8 w-8`}
             ></div>
           </>
-        )}
+        }
       </div>
     </div>
   );
