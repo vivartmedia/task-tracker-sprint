@@ -9,10 +9,11 @@ import ModalComment from "../Components/ModalComment";
 const Boardpage = () => {
     const [openModal, setOpenModal] = useState(false); // For ModalCreate, initially set to false
     const [openModalComment, setOpenModalComment] = useState(false); // For ModalComment, initially set to false
+    const [accountColor, setaccountColor] = useState("#57CDFF");
 
     return (
         <div>
-            <NavBarComponent />
+            <NavBarComponent accountColor={accountColor} />
           
 
             <div className="flex min-h-screen flex-col md:p-24 p-6  bg-green-50">
