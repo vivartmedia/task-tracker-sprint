@@ -20,8 +20,8 @@ const Boardpage = () => {
         <div>
             <NavBarComponent />
             <div className="flex min-h-screen flex-col md:p-24 p-6 bg-green-50">
-           
-                <div className="flex flex-col items-center mb-10">
+                {/* Rest of the code remains the same */}
+                {/* <div className="flex flex-col items-center mb-10">
                     <div className="container mx-auto p-4 bg-green-200 max-w-screen-xl">
                         <div className="flex flex-wrap justify-around">
                             {tasks.map((task) => (
@@ -40,7 +40,7 @@ const Boardpage = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
