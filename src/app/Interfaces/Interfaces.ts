@@ -11,7 +11,7 @@ export interface INavbar {
     accountColor?: string;
 }
 
-export interface ICard{
+export interface ITaskCreate{
     "id": 0,
   "boardID": "string",
   "taskName": "string",

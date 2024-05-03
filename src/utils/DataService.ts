@@ -79,3 +79,11 @@ export const CreateTask = async (TaskObj: any) => {
     console.log(data);
     return data
 }
+export const fetchTasks = async () => {
+    const res = await fetch(url + '/Task/FetchTasks'); // Adjust the endpoint as needed
+    if (!res.ok) {
+        const message = `An error has occurred: ${res.status}`;
+        throw new Error(message);
+    }
+    return await res.json();
+}
