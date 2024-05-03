@@ -33,8 +33,20 @@ const ModalComment: React.FC<ModalCommentProps> = ({ openModal, setOpenModal }) 
             <div className="w-2/3 ">
               <h1 className="text-2xl pb-2">Description</h1>
               <p className="bg-green-50 p-3">Comment comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur dolorem nemo nobis similique eaque quo quos ullam laborum laudantium. Quia odit quo optio, vero at voluptatum quibusdam qui perspiciatis?</p>
+             
+             <h1 className="text-2xl mt-4">Comments</h1>
               <TextInput id="commentmodal" type="text"  onChange={handleCommentChange} placeholder="Add your comment..." className="mt-4 h-20" />
-              
+              <div className="flex ">
+              <div>
+                  <div className="w-8 align-middle mr-4 h-8 bg-pink-400 rounded-full"></div>
+                </div>
+                <div>
+                  <h1 className="text-2xl m" >Username:</h1>
+                </div>
+                
+              </div>
+              <p className="bg-green-50 p-3">Comment comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur dolorem nemo nobis similique eaque quo quos ullam laborum laudantium. Quia odit quo optio, vero at voluptatum quibusdam qui perspiciatis?</p>
+
             </div>
 
             <div id="assignee" className="w-1/3 bg-gray-100 p-4 flex flex-col space-y-4">
