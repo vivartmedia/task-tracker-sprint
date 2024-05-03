@@ -11,9 +11,9 @@ const Boardpage = () => {
     const [openModalComment, setOpenModalComment] = useState(false); // For ModalComment, initially set to false
 
     return (
-        <>
+        <div>
             <NavBarComponent />
-            <NavBarComponent />
+          
 
             <div className="flex min-h-screen flex-col md:p-24 p-6  bg-green-50">
                 <div className="flex md:flex-row flex-col md:items-center pb-4">
@@ -251,8 +251,8 @@ const Boardpage = () => {
 
                 </div>
             </div>
-        </>
-
+        </div>
+</div>
     )
 }
 
