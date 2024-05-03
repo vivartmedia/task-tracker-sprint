@@ -21,8 +21,8 @@ const Boardpage = () => {
                     <h1 className="text-3xl md:p-12 font-semibold">OUR BOARD</h1>
                     <div className="flex items-center " >
                         <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
-                        <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
-                        <div className="w-12 h-12 bg-pink-400 rounded-full mr-4"></div>
+                        <div className="w-12 h-12 bg-green-400 rounded-full mr-4"></div>
+                        <div className="w-12 h-12 bg-blue-400 rounded-full mr-4"></div>
                         <h1 onClick={() => setOpenModal(true)} className="text-6xl font-thin">+</h1>
                     </div>
                 </div>
